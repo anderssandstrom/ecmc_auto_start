@@ -1658,4 +1658,6 @@ ECATtimestamp aSubRecord: IOC_TEST:m0s005-BI02-TimeFallTS
 2022/02/09 16:43:48.261 ecmcAsynPortDriver:getEpicsState: EPICS state: Unknown state (29). Allow callbacks: true.
 iocRun: All initialization complete
 2022/02/09 16:43:48.268 ecmcAsynPortDriver:getEpicsState: EPICS state: initHookAfterIocRunning (16). Allow callbacks: true.
-mcag-dev-asm-02-29271 > 
+mcag-dev-asm-02-29271 > @@@ Current time: Wed Feb  9 16:45:13 2022
+@@@ Child process is shutting down, a new one will be restarted shortly
+@@@ ^R or ^X restarts the child, ^Q quits the server

@@ -1,0 +1,40 @@
+[Unit]
+Description=Mcu1025 test
+#AssertPathExists=/nfs/ts/nbs/%i/st.cmd
+Requires=multi-user.target
+#Before=conserver.service
+After=remote-fs.target network.target network-online.target autofs.service
+Wants=network.target network-online.target autofs.service
+#RequiresMountsFor=/nfs/ts/nbs
+
+[Service]
+Type=forking
+WorkingDirectory=/home/anderssandstrom/sources/test_service
+RuntimeDirectory=procServ_dir
+#ExecStartPre=/usr/bin/sleep 1
+ExecStart=/bin/bash -c '/usr/bin/procServ \
+  --foreground \
+  --logfile=procServ.log \
+  --info-file=/home/anderssandstrom/sources/test_service/run/info \
+  --ignore=^C^D \
+  --chdir=/home/anderssandstrom/sources/test_service \
+  --name=mcu1025 \
+  --port=unix:/home/anderssandstrom/sources/test_service/run/control \
+  /epics/base-7.0.5/require/3.4.1/bin/iocsh.bash /home/anderssandstrom/sources/test_service/mcu1025.script'
+
+SyslogIdentifier=mcu1025
+RuntimeDirectory=mcu1025
+RuntimeDirectoryMode=0755
+#User=iocuser
+#User=anderssandstrom
+#Group=iocgroup
+# attempt to restart (on-failure) after 180 seconds
+Restart=on-failure
+RestartSec=180
+# If unit restarts more than 10 times in 1200 seconds, do not attempt to restart further
+StartLimitInterval=1200
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target
+

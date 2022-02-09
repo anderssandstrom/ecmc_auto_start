@@ -35,7 +35,7 @@ systemctl stop	mcu1025
   332  2022-02-09 16:43:43 sudo systemctl start mcu1025.service
 ```
 
-## Trouble shooting
+## Troubleshooting
 
 Seems most of the issues I was experiencing was releted to user rights.
 I needed to remove iocuser and iocgroup so maybe ecmc is not started up correct (with correct prio and memlock)

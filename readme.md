@@ -12,6 +12,12 @@ Also need todo the follwoing subdirs to this dir:
 
 Move mcu1025.script to /etc/systemd/system
 
+
+## Check paths
+Check all paths in:
+* mcu1025.service 
+* env.sh (that sources the environment)
+
 ## Control service
 
 start service with:

@@ -32,6 +32,31 @@ systemctl stop	mcu1025
 
 ## Logs
 In the procServ.log file you can see the iocsh output.
+```
+@@@ Restarting child "mcu1025"
+@@@    (as /epics/base-7.0.5/require/3.4.1/bin/iocsh.bash)
+@@@ The PID of new child "mcu1025" is: 29271
+@@@ @@@ @@@ @@@ @@@
+Loading environment variables from /home/anderssandstrom/sources/test_service/env.sh
+
+Set the ESS EPICS Environment as follows:
+THIS Source NAME    : setE3Env.bash
+THIS Source PATH    : /epics/base-7.0.5/require/3.4.1/bin
+EPICS_BASE          : /epics/base-7.0.5
+EPICS_HOST_ARCH     : linux-x86_64
+E3_REQUIRE_LOCATION : /epics/base-7.0.5/require/3.4.1
+PATH                : /epics/base-7.0.5/require/3.4.1/bin:/epics/base-7.0.5/bin/linux-x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+LD_LIBRARY_PATH     : /epics/base-7.0.5/lib/linux-x86_64:/epics/base-7.0.5/require/3.4.1/lib/linux-x86_64
+
+Enjoy E3!
+registerChannelProviderLocal firstTime true
+#
+# Start at "2022-W06-Feb09-1643-44-CET"
+#
+# Version information:
+...
+...
+```
 
 ## Some usefull comamnds
 ```

@@ -28,8 +28,10 @@ systemctl start mcu1025
 stop service with:
 ```
 systemctl stop	mcu1025
-
 ```
+
+## Logs
+In the procServ.log file you can see the iocsh output.
 
 ## Some usefull comamnds
 ```

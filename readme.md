@@ -31,7 +31,7 @@ systemctl stop	mcu1025
 ```
 
 ## Logs
-In the procServ.log file you can see the iocsh output.
+In the procServ.log file you can see the iocsh output:
 ```
 @@@ Restarting child "mcu1025"
 @@@    (as /epics/base-7.0.5/require/3.4.1/bin/iocsh.bash)
